@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+const { mongodbPath } = require('../config/config.default')
 async function main () {
-	await mongoose.connect('mongodb://127.0.0.1:27017/rexpress-video')
+	await mongoose.connect(mongodbPath)
 }
 
 main().then(res=>{
