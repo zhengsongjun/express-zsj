@@ -1,12 +1,14 @@
 const express = require('express')
 const router = express.Router()
 const useController = require('../controller/userController')
-const { register } = require('../middleware/validator/userValidator')
+const { register , login } = require('../middleware/validator/userValidator')
 
 
 router
 .post('/registers',register,
 useController.register)
+.post('/logins',login,
+useController.login)
 .get('/lists',useController.list)
 .delete('/',useController.delete)
 
