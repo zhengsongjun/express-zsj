@@ -10,7 +10,7 @@ exports.register = async (req,res) => {
 
 exports.list = async (req,res) => {
 	console.log(req.method)
-	res.send('/video-list')
+	res.send('/user-list')
 }
 
 exports.delete = async (req,res) => {

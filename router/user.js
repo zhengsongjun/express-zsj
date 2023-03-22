@@ -5,9 +5,9 @@ const { register } = require('../middleware/validator/userValidator')
 
 
 router
-.post('/register',register,
+.post('/registers',register,
 useController.register)
-.get('/list',useController.list)
+.get('/lists',useController.list)
 .delete('/',useController.delete)
 
 module.exports = router
