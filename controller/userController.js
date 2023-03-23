@@ -17,8 +17,14 @@ exports.login = async (req,res) => {
 	const data = dbBack.toJSON()
 	const token = await createToken(data)
 	const result = { ...data , token } 
-	console.log(result)
 	res.status(200).json(result)
+}
+
+// 用户修改
+exports.update = async (req,res) => {
+	const id = req.userinfo.userinfo._id
+	const updateData = await User.findByIdAndUpdate(id , req.body , {new:true})
+	return res.status(200).json({user:updateData})
 }
 
 exports.list = async (req,res) => {

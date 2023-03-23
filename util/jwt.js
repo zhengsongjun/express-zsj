@@ -25,5 +25,4 @@ module.exports.verifyToken = async (req,res,next)=>{
 	}catch(e) {
 		res.status('402').json({error:"无效token"})
 	}
-	next()
 }
