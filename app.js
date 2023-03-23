@@ -26,6 +26,10 @@ app.use(morgan('dev'))
 // 路由引入
 app.use('/api/v1',router)
 
+
+// 静态资源处理
+app.use(express.static('public'))
+
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`)
 })
